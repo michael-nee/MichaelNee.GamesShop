@@ -105,7 +105,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplCommerce.Module.Storag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplCommerce.Module.Pricing.Tests", "test\SimplCommerce.Module.Pricing.Tests\SimplCommerce.Module.Pricing.Tests.csproj", "{BF0C0613-B127-4580-8C3E-492BCBC2744E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplCommerce.Module.DinkToPdf", "src\Modules\SimplCommerce.Module.DinkToPdf\SimplCommerce.Module.DinkToPdf.csproj", "{EB2D720D-E784-4A21-A638-ACD462167FDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplCommerce.Module.DinkToPdf", "src\Modules\SimplCommerce.Module.DinkToPdf\SimplCommerce.Module.DinkToPdf.csproj", "{EB2D720D-E784-4A21-A638-ACD462167FDF}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{11B559F1-847E-430D-BDAB-D3358AC790C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -597,6 +599,18 @@ Global
 		{EB2D720D-E784-4A21-A638-ACD462167FDF}.Release|x64.Build.0 = Release|Any CPU
 		{EB2D720D-E784-4A21-A638-ACD462167FDF}.Release|x86.ActiveCfg = Release|Any CPU
 		{EB2D720D-E784-4A21-A638-ACD462167FDF}.Release|x86.Build.0 = Release|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Debug|x86.Build.0 = Debug|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Release|x64.Build.0 = Release|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Release|x86.ActiveCfg = Release|Any CPU
+		{11B559F1-847E-430D-BDAB-D3358AC790C2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

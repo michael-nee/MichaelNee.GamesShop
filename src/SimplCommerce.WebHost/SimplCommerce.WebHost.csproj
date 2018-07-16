@@ -5,12 +5,23 @@
     <UserSecretsId>aspnet-Modular.WebHost-dca604fa-ee10-4a6c-8e7d-8cc79dca8c8f</UserSecretsId>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="wwwroot\**\*;web.config;appsettings.json;Modules\**\*;Themes\**\*;Views\**\*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Themes\MDBootstrap\Modules\SimplCommerce.Module.Core\Views\_ViewImports.cshtml" />
+    <None Remove="Themes\MDBootstrap\Modules\SimplCommerce.Module.Core\Views\_ViewStart.cshtml" />
+    <None Remove="Themes\MDBootstrap\theme.json" />
+    <None Remove="Themes\MDBootstrap\Modules\SimplCommerce.Module.Core\Views\Home\Index.cshtml" />
+    <None Remove="Themes\MDBootstrap\Views\Shared\_Layout.cshtml" />
+    <None Remove="Themes\MDBootstrap\Views\_ViewStart.cshtml" />
+    <None Remove="Themes\MDBootstrap\_ViewImports.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,6 +67,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\mdbootstrap\" />
+    <Folder Include="wwwroot\themes\MDBootstrap\" />
   </ItemGroup>
 
   <Target Name="RestoreNpmPackage" AfterTargets="CollectPackageReferences" Condition="!Exists('node_modules') ">
