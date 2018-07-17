@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   simplcommerce.webhost:
-    image: ${DOCKER_REGISTRY}simplcommercewebhost
+    image: ${DOCKER_REGISTRY}michaelneegameshop
     build:
       context: .
       dockerfile: src/SimplCommerce.WebHost/Dockerfile

@@ -29,6 +29,8 @@ COPY src/Modules/SimplCommerce.Module.PaymentStripe/SimplCommerce.Module.Payment
 COPY src/Modules/SimplCommerce.Module.ProductComparison/SimplCommerce.Module.ProductComparison.csproj src/Modules/SimplCommerce.Module.ProductComparison/
 COPY src/Modules/SimplCommerce.Module.Vendors/SimplCommerce.Module.Vendors.csproj src/Modules/SimplCommerce.Module.Vendors/
 COPY src/Modules/SimplCommerce.Module.Contacts/SimplCommerce.Module.Contacts.csproj src/Modules/SimplCommerce.Module.Contacts/
+COPY src/Modules/SimplCommerce.Module.PaymentBraintree/SimplCommerce.Module.PaymentBraintree.csproj src/Modules/SimplCommerce.Module.PaymentBraintree/
+
 COPY src/Modules/SimplCommerce.Module.PaymentPaypalExpress/SimplCommerce.Module.PaymentPaypalExpress.csproj src/Modules/SimplCommerce.Module.PaymentPaypalExpress/
 COPY src/Modules/SimplCommerce.Module.Inventory/SimplCommerce.Module.Inventory.csproj src/Modules/SimplCommerce.Module.Inventory/
 COPY src/Modules/SimplCommerce.Module.PaymentCoD/SimplCommerce.Module.PaymentCoD.csproj src/Modules/SimplCommerce.Module.PaymentCoD/

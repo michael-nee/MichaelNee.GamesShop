@@ -1,0 +1,59 @@
+﻿@model SimplCommerce.Module.PaymentBraintree.ViewModels.BraintreeCheckoutForm
+
+<button data-toggle="modal" data-target="#brainTreeModal" class="btn btn-primary">Pay with Braintree</button>
+
+<div class="modal fade" id="brainTreeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="payment-form" method="post" asp-controller="Braintree" asp-action="Charge">
+
+                <div class="modal-body">
+                    <div id="bt-dropin"></div>
+                    <input id="nonce" name="payment_method_nonce" type="hidden" />
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="btn-braintree-pay" class="btn btn-primary"><span>Pay</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://js.braintreegateway.com/web/dropin/1.11.0/js/dropin.min.js"></script>
+<script>
+
+    var client_token = "@Model.ClientID";
+    var form = document.querySelector('#payment-form');
+
+    braintree.dropin.create({
+        authorization: client_token,
+        container: '#bt-dropin',
+        paypal: {
+            flow: 'vault'
+        }
+    }, function (createErr, instance) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            instance.requestPaymentMethod(function (err, payload) {
+                if (err) {
+                    console.log('Error', err);
+                    return;
+                }
+
+                // Add the nonce to the form and submit
+                document.querySelector('#nonce').value = payload.nonce;
+                form.submit();
+
+                document.getElementById("btn-braintree-pay").disabled = true;
+            });
+        });
+        });
+
+</script>
